@@ -388,6 +388,7 @@ html{
 					width: 100%;
 					border-bottom: 1px solid lightgray;
 					position: relative;
+                    
 					
 					
 					a{
@@ -494,6 +495,10 @@ html{
 							color: gray;
 							padding-bottom: 15px;
 							padding-top: 10px;
+                            
+                            .comments-amount{
+                                float: right;
+                            }
 						}
 
 						.large-post-exerpt{
@@ -547,7 +552,7 @@ html{
 
 							.galery-thumbnail{
 								box-sizing: border-box;
-								width: auto;
+								width: 100%;
 								height: 100%;
 								overflow: hidden;
 								position: relative;
@@ -559,7 +564,7 @@ html{
 									left: 50%;
 									top: 50%;
 									height: 100%;
-									width: auto;
+									width: 100%;
 									-webkit-transform: translate(-50%,-50%);
 									-ms-transform: translate(-50%,-50%);
 									transform: translate(-50%,-50%);
@@ -606,7 +611,7 @@ html{
 						}
 						
 						:hover{
-							opacity: 0.9;
+							opacity: 1;
 							transition: .5s ease;
 							
 							.galery-description{
@@ -626,7 +631,20 @@ html{
 				
 			}
 			
-			
+            .add{
+                box-sizing: border-box;
+                width: 43%;
+                height: 130px;
+                background-color: #eae9e9;
+                margin: 0;
+                float: right;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: #dad8d8;
+                text-transform: uppercase;
+                margin: 5px;
+            }
 				
 			
 			.articles-container{
@@ -647,7 +665,7 @@ html{
 					
 					h3{
 						font-size: 18px;
-						background-color:  #eae9e9;;
+						background-color:  #eae9e9;
 						border-left: 10px solid $thirdcolor;
 						padding: 5px;
 						padding-left: 15px;
@@ -721,6 +739,10 @@ html{
 								font-size: 12px;
 								color: gray;
 								padding-bottom: 15px;
+                                
+                                .comments-amount{
+                                    float: right;
+                                }
 							}
 
 							.article-exerpt{
@@ -1016,7 +1038,7 @@ html{
 
 @media only screen and (max-width: 768px) {
 	.main-article{
-				width: 100% !important;
+            width: 100% !important;
 				
 				
 				
@@ -1090,6 +1112,10 @@ html{
 		}
 		
 	}
+    
+    .add{
+        display: none !important;
+    }
 	
 	.next-comp{
 			width: 100% !important;
