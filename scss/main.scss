@@ -382,15 +382,14 @@ html{
 			.main-article{
 				width: 55%;
 				float: left;
-				
+				box-sizing: border-box;
+                padding-right: 20px;
 				
 				.swiper-articles{
 					width: 100%;
 					border-bottom: 1px solid lightgray;
 					position: relative;
-                    
-					
-					
+
 					a{
 						display: block;
   						cursor: pointer;
@@ -407,8 +406,8 @@ html{
 								position: absolute;
 								left: 50%;
 								top: 50%;
-								height: 100%;
-								width: 100%;
+								height: auto;
+								min-width: 100%;
 								-webkit-transform: translate(-50%,-50%);
 								-ms-transform: translate(-50%,-50%);
 								transform: translate(-50%,-50%);
@@ -552,8 +551,8 @@ html{
 
 							.galery-thumbnail{
 								box-sizing: border-box;
-								width: 100%;
-								height: 100%;
+								width: auto;
+								min-height: 100%;
 								overflow: hidden;
 								position: relative;
 								border: 3px solid #ddd;
@@ -561,13 +560,13 @@ html{
 
 								img{
 									position: absolute;
-									left: 50%;
-									top: 50%;
-									height: 100%;
-									width: 100%;
-									-webkit-transform: translate(-50%,-50%);
-									-ms-transform: translate(-50%,-50%);
-									transform: translate(-50%,-50%);
+                                    left: 50%;
+                                    top: 50%;
+                                    height: 100%;
+                                    width: auto;
+                                    -webkit-transform: translate(-50%,-50%);
+                                    -ms-transform: translate(-50%,-50%);
+                                    transform: translate(-50%,-50%);
 								}
 
 
@@ -633,7 +632,7 @@ html{
 			
             .add{
                 box-sizing: border-box;
-                width: 43%;
+                width: 44%;
                 height: 130px;
                 background-color: #eae9e9;
                 margin: 0;
@@ -1039,7 +1038,7 @@ html{
 @media only screen and (max-width: 768px) {
 	.main-article{
             width: 100% !important;
-				
+            padding: 5px !important;
 				
 				
 		
@@ -1135,6 +1134,7 @@ html{
 	.articles-container{
 			margin-top: 50px;
 			width: 100% !important;
+            padding: 0 !important;
 		
 		.older-article{
 				width: 100% !important;
@@ -1152,7 +1152,13 @@ html{
 			
 			.article-thumbnail{
 				width: 40% !important;
-				height: 100px !important;
+				height: 120px !important;
+                padding-left: 0 !important;
+                
+                img{
+                    width: 100% !important;
+                    height: auto !important;
+                }
 				
 			}
 			
