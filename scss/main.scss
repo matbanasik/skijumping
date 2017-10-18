@@ -203,20 +203,21 @@ html{
 		
 		.side-nav {
 			  height: 100%;
-			  width: 0;
+			  width: 50%;
 			  position: fixed;
 			  z-index: 1;
 			  top: 0;
 			  left: 0;
 			  background-color: $sidenavcolor;
 			  opacity: 0.9;
-			  overflow-x: hidden;
 			  padding-top: 60px;
 			  transition: 0.5s;
 			  display: flex;
 			  flex-direction: column;
 			  text-transform: uppercase;
 			  border-bottom: 1px solid $secondarycolor;
+              display: none;
+              z-index: 50;
 			
 			  :first-child{
 					  border: none;
@@ -686,7 +687,7 @@ html{
 						padding: 10px;
 
 						.article-thumbnail{
-							width: 100%;
+							
 							height: 250px;
 							margin-left: 0;
 							overflow: hidden;
@@ -696,8 +697,8 @@ html{
 								position: absolute;
 								left: 50%;
 								top: 50%;
-								height: 100%;
-								width: auto;
+								height: 100% !important;
+								
 								-webkit-transform: translate(-50%,-50%);
 								-ms-transform: translate(-50%,-50%);
 								transform: translate(-50%,-50%);
@@ -1074,28 +1075,28 @@ html{
 		
 		
 		.go-next{
-			visibility: hidden;
+			display: none !important;
 		}
 		
 		.go-prev{
-			visibility: hidden;
+			display: none !important;
 		}
 		
 		.pagination{
-			visibility: hidden;
+			display: none !important;
 		}
 		
 		
 		.large-post-date{
-			display: none;
+			display: none !important;
 		}
 		
 		.large-post-exerpt{
-			display: none;
+			display: none !important;
 		}
 		
 		.progress-bar{
-			display: none;
+			display: none !important;
 		}
 	}
 	
@@ -1156,8 +1157,8 @@ html{
                 padding-left: 0 !important;
                 
                 img{
-                    width: 100% !important;
-                    height: auto !important;
+                    width: auto !important;
+                    height: 100% !important;
                 }
 				
 			}
@@ -1174,7 +1175,7 @@ html{
 				}
 				
 				.article-exerpt{
-					visibility: hidden;
+					display: none !important;
 				}
 			}
 	}
@@ -1183,14 +1184,19 @@ html{
 	header{
 		
 		.social{
-			width: 0;
-			visibility: hidden;
+			width: 0 !important;
+			display: none !important;
 		}
 	}
 	aside{
-		display: none;
+		display: none !important;
 	}
 }
+    
+    .scrollToTop{
+    display: none !important;
+    }
+    
 	footer{
 		flex-wrap: wrap;
 		min-height: 550px !important;
